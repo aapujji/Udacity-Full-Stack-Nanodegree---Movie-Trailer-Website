@@ -37,4 +37,4 @@ Then open the entertainment_center.py file in IDLE and click Run -> Run Module (
 
 This project was created by [Aanandita Pujji](http://www.github.com/aapujji).
 
-Licensing terms for this project can be found in the [license]() file included in this repo.
+Licensing terms for this project can be found in the [license](https://github.com/aapujji/Udacity-Full-Stack-Nanodegree---Movie-Trailer-Website/blob/master/LICENSE) file included in this repo.
