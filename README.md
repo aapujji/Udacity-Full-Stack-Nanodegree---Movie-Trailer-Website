@@ -1,4 +1,4 @@
-# Udacity-Full-Stack-Nanodegree: Movie-Trailer-Website
+# Udacity Full Stack Nanodegree: Movie Trailer Website
 
 
 ## Description
