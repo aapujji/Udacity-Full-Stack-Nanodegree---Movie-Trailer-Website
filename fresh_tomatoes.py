@@ -11,13 +11,11 @@ main_page_head = '''
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aanandita's Top 6 (Not Scary) Halloween Movies</title>
-
     <link rel="icon" href="assets/pumpkin_light.png">
-    
+
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Oswald:700" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -33,16 +31,15 @@ main_page_head = '''
         h2 { font-family: 'Oswald', sans-serif; font-size: 32px; font-weight: 700; line-height: 42px; }
         h4 { font-size: 18px; font-weight: 500; line-height: 24px; letter-spacing: -0.5px; }
         p { padding: 0; margin: 0; line-height: 20px; }
-        
+
         .navbar { position: static; margin-bottom: 60px; }
         .navbar-header { float: none; }
         .navbar .navbar-brand { color: #fff; text-shadow: none; height: auto; float: none; padding: 10px 15px; display: block; text-align: center; }
         .navbar .navbar-brand img { width: 56px; height: 56px; display: inline-block; vertical-align: middle; margin-right: 5px; }
         .navbar .navbar-brand .page-title { text-transform: uppercase; display: inline-block; vertical-align: middle; font-size: 24px; font-weight: 700; line-height: 28px; }
         .navbar .navbar-brand .page-title span { font-weight: 400; }
-
         .main-content { width: 100%; max-width: 1000px; }
-        
+
         #trailer .modal-dialog {
             /* margin-top: 200px; */
             width: 100%;
@@ -148,13 +145,11 @@ main_page_head = '''
             transform: translateX(-50%);
             background-color: white;
         }
-
         @media screen and (max-width: 768px) {
             .flex-box { padding: 0; }
             .movie-tile .mobile-info { display: inline-block; }
             .rating-container .rect .rating:hover:before, .rating-container .rect .rating:hover:after, .rating-container .rect .rating:hover:before, .rating-container .rect .rating:hover:after { visibility: hidden; opacity: 0; }
         }
-
         @media screen and (max-width: 767px) {
             .flex-box { display: block; }
             .flex-box .flex-left, .flex-box .flex-right { float: none; }
@@ -162,17 +157,15 @@ main_page_head = '''
             .flex-box .flex-left img { width: 100%; height: 100%; }
             .flex-box .flex-right { max-width: 400px; margin: 0 auto; padding: 0 10px; }
         }
-
         @media screen and (max-width: 650px) {
             .navbar .navbar-brand { padding: 20px 15px; }
             .navbar .navbar-brand img, .navbar .navbar-brand .page-title { display: block; margin: 0 auto; }
             .navbar .navbar-brand img { margin-bottom: 5px; }
         }
-
         @media screen and (max-width: 450px) {
             #trailer .modal-dialog { height: 400px; margin: 100px 0 0; }
         }
-        
+
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -192,13 +185,11 @@ main_page_head = '''
               'src': sourceUrl,
               'frameborder': 0
             }));
-
             var backdropImageURL = $(this).attr('data-backdrop-url')
-
             console.log(backdropImageURL)
             $('.modal-content').css({'background-image':'url("' + backdropImageURL + '")'});
         });
-        
+
         // Animate in the movies when the page loads
         /*
         $(document).ready(function () {
@@ -207,7 +198,7 @@ main_page_head = '''
           });
         });
         */
-        
+
         // Animate the pumpkin in the header
         $(document).ready(function() {
             if ($(window).width() > 650) {
@@ -221,7 +212,6 @@ main_page_head = '''
                 $('.navbar-brand img').attr('src','assets/pumpkin2-candle-.png');
             }
         });
-
         // Generates a bar to display movie rating
         $(document).ready(function() {
             $('.rect').each(function() {
@@ -229,9 +219,8 @@ main_page_head = '''
                 var containerWidth = $(this).width()
                 var totalWidth = barWidth * containerWidth
                 $(this).find($('.rating')).width(totalWidth)
-                
-                console.log(totalWidth)
 
+                console.log(totalWidth)
                 var ratingPercent = ($(this).attr('data-rating') * 10) + '%'
                 console.log(ratingPercent)
                 $(this).find($('.rating')).attr('data-rating-hover',ratingPercent)
@@ -259,7 +248,6 @@ main_page_content = '''
         </div>
       </div>
     </div>
-
     <!-- Main Page Content -->
     <div class="container">
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
