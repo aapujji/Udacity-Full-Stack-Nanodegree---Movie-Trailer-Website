@@ -1,6 +1,7 @@
 import webbrowser
 import os
 import re
+import media
 
 
 # Styles and scripting for the page
@@ -288,7 +289,8 @@ movie_tile_content = '''
                 </div>
             </div>
             <div class="btn-container">
-                <a href="#" class="modal-open" data-trailer-youtube-id="{trailer_youtube_id}" data-backdrop-url="{backdrop_image_url}" data-toggle="modal" data-target="#trailer"><i class="fa fa-youtube-play"></i> Watch Trailer</a>
+                <a href="#" class="modal-open" data-trailer-youtube-id="{trailer_youtube_id}" data-backdrop-url="{backdrop_image_url}"
+                    data-toggle="modal" data-target="#trailer"><i class="fa fa-youtube-play"></i> Watch Trailer</a>
             </div>
         </div>
     </div>
@@ -310,12 +312,13 @@ def create_movie_tiles_content(movies):
 
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
-            movie_title=movie.title,
-            movie_storyline=movie.storyline,
-            movie_tagline=movie.tagline,
-            movie_rating=movie.rating,
-            poster_image_url=movie.poster_image_url,
-            backdrop_image_url=movie.backdrop_image_url,
+            movie_id=movie.id,
+            movie_title=media.Movie.get_title(movie, movie.id),
+            movie_storyline=media.Movie.get_storyline(movie, movie.id),
+            poster_image_url=media.Movie.get_poster_img(movie, movie.id),
+            backdrop_image_url=media.Movie.get_backdrop_img(movie, movie.id),
+            movie_tagline=media.Movie.get_tagline(movie, movie.id),
+            movie_rating=media.Movie.get_rating(movie, movie.id),
             trailer_youtube_id=trailer_youtube_id
         )
     return content
